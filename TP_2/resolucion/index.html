@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./baseStyle.css" />
+    <title>TP 2</title>
+  </head>
+  <body>
+    <form action="action.php" method="post">
+      <h1>Contact Form</h1>
+      <div class="data-field-title">
+        <div class="number">1</div>
+        <span class="">Your basic info</span>
+      </div>
+
+      <div class="data-field">
+        <label for="name">Name </label>
+        <input type="text" id="name" name="user_name" required />
+
+        <label for="mail">Email </label>
+        <input type="email" id="mail" name="user_email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="user_password" required />
+
+        <label>Birthday</label>
+        <input type="date" id="birthday" name="user_birth_day" required />
+        <div class="data-field-inline">
+          <label>Sex: </label>
+          <input type="radio" id="male" value="male" name="user_sex" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" value="female" name="user_sex" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="data-field-title">
+        <div class="number">2</div>
+        <span class="">Your Profile</span>
+      </div>
+
+      <div class="data-field">
+        <label for="bio">About you</label>
+        <textarea id="bio" name="user_bio"></textarea>
+
+        <label for="role">Role</label>
+        <select id="role" name="user_role">
+          <optgroup label="Web">
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="backend_developer">Back-End Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="qa_automation">QA Automation</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="php_developer">PHP Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="Android_developer">Androild Developer</option>
+            <option value="iOS_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+        </select>
+
+        <label>Interests</label><br />
+        <div class="data-field-inline">
+          <input type="checkbox" id="database" name="interest_database" />
+          <label class="light" for="database">Data Base</label>
+
+          <input type="checkbox" id="design" name="interest_design" />
+          <label class="light" for="design">Design</label>
+
+          <input type="checkbox" id="business" name="interest_business" />
+          <label class="light" for="business">Business</label>
+
+          <input type="checkbox" id="unittest" name="interest_unittest" />
+          <label class="light" for="unittest">Unit Test</label>
+          <input
+            type="checkbox"
+            id="cloud_development"
+            name="interest_clouddevelopment"
+          />
+          <label class="light" for="cloud_development">Cloud Development</label>
+
+          <input
+            type="checkbox"
+            id="development"
+            name="interest_webdevelopment"
+          />
+          <label class="light" for="development">Web Development</label>
+        </div>
+      </div>
+      <div class="buttons">
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
